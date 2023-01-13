@@ -1,3 +1,3 @@
 <template>
-    <FirstSection/>
+    <TopSection/>
 </template>
