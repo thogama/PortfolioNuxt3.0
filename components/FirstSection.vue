@@ -1,24 +1,44 @@
 <script lang="ts" setup>
 
-let state = useState("range", () => 0)
 
-let a = () => { console.log(state.value) }
+function invert() {
+    let image = document.getElementById("image")
+    if (image!.classList.contains("shape")) {
+        image!.classList.remove("shape")
+    }
+    else
+        image!.classList.add("shape")
+}
 
 </script>
 <template>
     <div class="container">
-        <img @click="a()" class="shape img-fluid" src="~/assets/IA-59 (1).jpg" />
-        <label for="customRange1" class="form-label">Example range</label>
-        <input v-model="state" type="range" class="form-range" id="customRange1">
-
+        <img id="image" class="img-fluid" src="~/assets/IA-59 (1).jpg" />
+        <div class="form-check form-switch">
+            <input @click="invert()" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                checked>
+        </div>
     </div>
 
 </template>
 
 
-<style>
-.shape {
-    clip-path: circle(50% at 50% 50%);
+<style scooped>
+@keyframes example {
+    0% {
+        clip-path: circle(50% at 50% 50%);
+    }
 
+    50% {
+        clip-path: circle(0% at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(50% at 50% 50%);
+    }
+}
+
+.shape {
+    animation: 0.5s ease example;
 }
 </style>
