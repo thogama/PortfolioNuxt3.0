@@ -13,4 +13,7 @@ body {
   font-family: 'Inconsolata', monospace;
   margin: 0;
 }
+a{
+  text-decoration: none;
+}
 </style>
