@@ -1,85 +1,62 @@
-<script lang="ts" setup>
 
-
-function invert() {
-    let image = document.getElementById("image")
-    if (image!.classList.contains("shape")) {
-        image!.classList.remove("shape")
-        image!.classList.add("reshape")
-    }
-    else {
-        image!.classList.remove("reshape")
-
-        image!.classList.add("shape")
-    }
-}
-
-</script>
 <template>
-    <div style="height: 100vh;" class="container bg-dark">
+    <div class="row ">
         
-                <div class="form-check form-switch">
-                <input @click="invert()" class="form-check-input text-primary" type="checkbox" role="switch"
-                    id="flexSwitchCheckChecked" checked>
-            </div>
-      
-        <div class="row">
-            <img id="image" class="img-fluid" src="~/assets/IA-59 (1).jpg" />
+        <div class="text-white col d-flex align-items-center flex-column justify-content-evenly">
+            <k-container>
+                <k-element  strength="20">
+                    <div style="width:inherit"
+                        class="rounded justify-content-start d-flex bg-secondary align-items-center">
+                        <Icon class="border m-2 border-dark fs-1" name="grommet-icons:linkedin" />
+                        <div class="mx-1 fs-5">
+                            @alangam4
+                        </div>
+                    </div>
+                </k-element>
+            </k-container>
+            
+            <k-container>
+                <k-element  strength="20">
+                    <div style="width:inherit" class="rounded justify-content-start d-flex bg-info align-items-center">
+                        <Icon class="border m-2 fs-1" name="grommet-icons:github" />
+                        <div class="mx-1 fs-5">
+                            @thogama
+                        </div>
+                    </div>
+                </k-element>
+            </k-container>
+
+
+            <k-container>
+                <k-element  strength="20">
+                    <div style="width:inherit" class="rounded justify-content-start d-flex bg-white align-items-center">
+                        <Icon class="border border-success p-1 text-success m-2 fs-1 bg-black"
+                            name="simple-icons:upwork" />
+                        <div class=" text-dark mx-1 fs-5">
+                            Alan G.
+                        </div>
+                    </div>
+                </k-element>
+            </k-container>
+
+
         </div>
 
+
+        <div class="col">
+            <img class="border img-fluid" src="~/assets/IA-59 (1).jpg" />
+            
+        </div>
+
+
+
+
+
     </div>
-
 </template>
-
+<script lang="ts" setup>
+</script>
 
 <style scooped>
-@keyframes example {
-    0% {
-        clip-path: circle(50% at 50% 50%);
-        opacity: 1;
-    }
 
-    50% {
-        clip-path: circle(0% at 50% 50%);
-        opacity: 0.5;
-    }
-
-    100% {
-        clip-path: circle(50% at 50% 50%);
-        opacity: 0;
-    }
-}
-
-@keyframes example2 {
-    100% {
-        clip-path: circle(50% at 50% 50%);
-        opacity: 1;
-    }
-
-    50% {
-        clip-path: circle(0% at 50% 50%);
-        opacity: 0.5;
-    }
-
-    0% {
-        clip-path: circle(50% at 50% 50%);
-        opacity: 0;
-    }
-}
-
-.shape {
-    animation: 0.5s ease example;
-    opacity: 0;
-    clip-path: circle(50% at 50% 50%);
-
-}
-
-.reshape {
-    animation: 0.5s ease example2;
-    opacity: 1;
-    clip-path: circle(50% at 50% 50%);
-    
-
-
-}
 </style>

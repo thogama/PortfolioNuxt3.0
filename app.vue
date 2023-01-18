@@ -1,16 +1,16 @@
 <template>
   <div>
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
-html {
-  font-family: 'Nova Mono', monospace;
+body {
+  font-family: 'Inconsolata', monospace;
   margin: 0;
 }
 </style>
