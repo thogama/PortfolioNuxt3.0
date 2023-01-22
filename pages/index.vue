@@ -1,4 +1,9 @@
 <template>
-    <!-- <Old/> -->
-    <TopSection/>
+    <div class="row">
+
+        <LeftSide />
+
+        <RightSide />
+    </div>
+
 </template>
