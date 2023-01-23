@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar">
         <div class="container justify-content-center">
-            <div id="naver-scroll" class="navbar-nav d-flex flex-row simple-list-example-scrollspy">
+            <div id="naver-scroll" class="align-items-center navbar-nav d-flex flex-row simple-list-example-scrollspy">
                 <a href="#aboutme" class="btn text-secondary mx-2 fw-bold nav-item " v-for="item in items">
                     {{ item }}
                 </a>
