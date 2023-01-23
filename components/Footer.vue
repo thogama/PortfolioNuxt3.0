@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-success">
-        footer footer
+    <div class="bg-success sticky-bottom">
+        IJFOOFJ0IAJ0IAJ0J0IAJS0
     </div>
 </template>
 
