@@ -2,7 +2,7 @@
     <nav class="navbar">
         <div class="container justify-content-center">
             <div id="naver-scroll" class="align-items-center navbar-nav d-flex flex-row simple-list-example-scrollspy">
-                <a href="#aboutme" class="btn text-secondary mx-2 fw-bold nav-item " v-for="item in items">
+                <a :href=uncaptalize(item) class="btn text-secondary mx-2 fw-bold nav-item " v-for="item in items">
                     {{ item }}
                 </a>
             </div>
@@ -11,7 +11,10 @@
 </template>
 
 <script setup lang="ts">
-let items = ["About me", "opcao2", "opcao3", "opcao4"]
+let items = ["About me", "Stacks", "opcao3", "opcao4"]
+let uncaptalize = (string: string) => {
+    return "#" + string.toLowerCase().replace(" ", "")
+}
 </script>
 <style scooped>
 li {

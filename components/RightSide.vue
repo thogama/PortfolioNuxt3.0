@@ -1,5 +1,5 @@
 <template>
-    <div class="col bg-info text-dark p-0">
+    <RightContainer>
         <div class="px-3 shadow-lg bg-light text-center sticky-top">
             <NavbarR />
         </div>
@@ -38,9 +38,20 @@
                 </div>
 
             </section>
+            <section id="stacks" class="row">
+
+                <div class="bg-danger fw-semibold my-4  p-1 text-center section ">
+                    Stacks and Technologies
+                </div>
+                <div class="shadow-lg d-flex border border-secondary rounded">
+                    testing
+
+                </div>
+
+            </section>
 
         </div>
-    </div>
+    </RightContainer>
 </template>
 
 <script lang="ts" setup>
