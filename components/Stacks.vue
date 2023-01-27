@@ -6,10 +6,10 @@
         </div>
         <div class="d-flex justify-content-evenly flex-wrap shadow bg-danger rounded">
             <div class=" p-2" v-for="icon, index in icons">
-                <k-container>
+                <k-container  class="p-1">
                     <k-element>
 
-                        <Icon class="bg-info rounded m-1 p-1 fs-1" :name="icon" />
+                        <Icon class=" bg-info rounded m-1 p-1 fs-1" :name="icon" />
 
                     </k-element>
                 </k-container>
