@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-let items = ["About me", "Stacks", "opcao3", "opcao4"]
+let items = ["About me", "Stacks", "Qualification", "opcao4"]
 let uncaptalize = (string: string) => {
     return "#" + string.toLowerCase().replace(" ", "")
 }
