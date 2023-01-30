@@ -5,5 +5,4 @@
 
         <RightSide />
     </div>
-    <!-- <All/> -->
 </template>
