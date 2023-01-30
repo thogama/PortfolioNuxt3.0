@@ -21,20 +21,23 @@
 </template>
 <script lang="ts" setup>
 let icons: Array<string> = [
-    "logos:react",
+    "logos:typescript-icon",
+    "logos:javascript",
+
+    "logos:nodejs-icon",
     "logos:vue",
-    "logos:nuxt-icon",
     "logos:bootstrap",
     "logos:laravel",
+
+    "logos:nuxt-icon",
     "logos:sass",
     "logos:html-5",
     "logos:css-3",
-    "logos:javascript",
-    "logos:typescript-icon",
-    "logos:nodejs-icon",
+    "logos:react",
     "logos:mysql",
     "logos:python",
-    "logos:prisma"
+    "mdi:github",
+    "logos:angular-icon"
 
 
 
