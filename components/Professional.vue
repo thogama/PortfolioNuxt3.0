@@ -7,12 +7,18 @@
             </div>
 
             <div class="card-body border bg-dark text-white rounded-bottom">
-                <div v-for="link in links" class="d-flex justify-content-around align-items-center my-4">
-                    <Icon class="fs-1" :href=link.href :name=link.icon />
-                    <div class="text-white">
-                        {{ link.name }}
-                    </div>
-                </div>
+                <ul class="list-group">
+                    <li v-for="xp in experiences" class="list-group-item">
+                        <div class="">
+                            {{ xp.name }}
+
+                        </div>
+                         <div data-bs-toggle="modal" :data-bs-target="`#detail` + xp.name" class="btn btn-success">Detail
+                        </div> 
+                        
+                        <Detail :name="xp.name" />
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -20,16 +26,16 @@
 
 </template>
 <script lang="ts" setup>
-let links: Array<{ name: string, icon: string, href: string }> = [
+let experiences: Array<{ name: string, detail: string, years: number }> = [
     {
-        name: "Linkedin",
-        icon: "logos:linkedin-icon",
-        href: "https://www.linkedin.com/in/alan-gama-devs/"
+        name: "Freelancer",
+        detail: "",
+        years: 3
     },
     {
-        name: "Upwork",
-        icon: "cib:upwork",
-        href: ""
+        name: "Freelancer",
+        detail: "",
+        years: 3
     },
 ]
 
