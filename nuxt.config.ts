@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
     ssr: false,
     css: ["~~/sass/main.scss"],
-    modules: ['nuxt-icon']
-
+    modules: ['nuxt-icon'],
+    nitro: {
+        preset: "firebase"
+    }
 })
