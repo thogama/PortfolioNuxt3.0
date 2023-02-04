@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-success sticky-bottom">
+    <div class="bg-dark text-white sticky-bottom">
         IJFOOFJ0IAJ0IAJ0J0IAJS0
     </div>
 </template>

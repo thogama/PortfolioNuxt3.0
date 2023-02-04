@@ -6,7 +6,7 @@
         </div>
         <div class="d-flex justify-content-evenly flex-wrap shadow bg-danger rounded">
             <div class=" p-2" v-for="icon, index in icons">
-                <k-container  class="p-1">
+                <k-container class="p-1">
                     <k-element>
 
                         <Icon class=" bg-info rounded m-1 p-1 fs-1" :name="icon" />
@@ -23,12 +23,10 @@
 let icons: Array<string> = [
     "logos:typescript-icon",
     "logos:javascript",
-
     "logos:nodejs-icon",
     "logos:vue",
     "logos:bootstrap",
     "logos:laravel",
-
     "logos:nuxt-icon",
     "logos:sass",
     "logos:html-5",
@@ -37,7 +35,7 @@ let icons: Array<string> = [
     "logos:mysql",
     "logos:python",
     "mdi:github",
-    "logos:angular-icon"
+    "logos:firebase"
 
 
 

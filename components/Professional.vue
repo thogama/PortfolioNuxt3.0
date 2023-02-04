@@ -7,29 +7,42 @@
             </div>
 
             <div class="card-body border bg-dark text-white rounded-bottom">
-                <ul class="list-group">
-                    <li v-for="xp in experiences"
-                        class="list-group-item d-flex align-items-center justify-content-between">
+                <ul class="list-group ">
+                    <li v-for="xp in experiences" class="list-group-item ">
                         <div class="">
                             {{ xp.name }}
 
                         </div>
-                        <div data-bs-toggle="modal" :data-bs-target="`#detail` + xp.name" class="btn btn-success">Detail
+                        <div data-bs-toggle="modal" :data-bs-target="`#detail` + xp.name.replaceAll(` `, ``)"
+                            class="btn btn-sm btn-success">Details
                         </div>
-                        <div class="modal  fade" :id="`detail` + xp.name" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    
+                        <div class="modal  fade" :id="`detail` + xp.name.replaceAll(` `, ``)" tabindex="-1"
+                            :aria-labelledby="`#detail` + xp.name" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <div class="modal-header bg-primary text-white">
-                                        <h1 class="modal-title fs-5 fw-semibold" :id="`#detail` + xp.name">My Experience
+                                    <div class="modal-header bg-success text-white">
+                                        <h1 class="modal-title p-2 fs-5 fw-semibold" :id="`#detail` + xp.name">My
+                                            Experience
                                             as {{
                                                 xp.name
                                             }}</h1>
                                         <button type="button" class="btn-close border bg-danger" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="bg-info text-secondary fw-thin  modal-body">
-                                        {{ xp.detail }} +{{ xp.years }}
+                                    <div class="bg-info  p-3 text-justify text-secondary fw-thin  modal-body">
+                                        <div class="fs-4 border rounded p-2">
+                                            {{ xp.detail }}
+                                            <div class="text-center fw-bolder">
+                                                <br />+ {{ xp.years }} years experience
+                                            </div>
+
+                                        </div>
+                                        <a class="btn  my-3 btn-secondary" target="_blank" :href=xp.link>
+                                            Take a look at
+                                            <Icon class="fs-1" :name="xp.icon" />
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
@@ -50,18 +63,20 @@ let calcYears = (input: string) => {
     return Math.floor(date3)
 }
 
-let experiences: Array<{ name: string, detail: string, years: any, link: string }> = [
+let experiences: Array<{ name: string, detail: string, years: any, link: string, icon: string }> = [
     {
         name: "Freelancer",
         detail: "Work as Fullstack developer on the Upwork's platform mainly",
         years: calcYears("01/01/2020"),
-        link: "",
+        link: "https://www.upwork.com/freelancers/~01c65b24230c0622b6?viewMode=1",
+        icon: "simple-icons:upwork"
     },
     {
         name: "Software Enginner",
-        detail: "",
-        years: calcYears("01/01/2022"),
-        link: "",
+        detail: "Work as Software Engineer on private projects since 2020, also i actually develop for DITIN a brazilian government institution",
+        years: calcYears("01/01/2021"),
+        link: "https://www.linkedin.com/in/alan-gama-devs",
+        icon: "bi:linkedin"
 
     },
 ]
