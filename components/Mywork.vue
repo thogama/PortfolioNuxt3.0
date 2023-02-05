@@ -1,7 +1,7 @@
 <template>
-    <section id="mywork" >
-        my previous work
-    </section >
+    <section class="row" id="mywork">
+        
+    </section>
 </template>
 
 <script setup lang="ts">
