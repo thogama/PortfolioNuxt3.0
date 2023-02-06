@@ -35,9 +35,9 @@
 
 let icons: { icon: string, link?: string }[] =
     [
-        { icon: "teenyicons:instagram-outline" },
-        { icon: "fa:linkedin-square" },
-        { icon: "simple-icons:upwork" },
+        { icon: "teenyicons:instagram-outline", link: "https://www.instagram.com/tho_gama/" },
+        { icon: "fa:linkedin-square", link: "https://www.linkedin.com/in/alan-gama-devs/" },
+        { icon: "simple-icons:upwork", link: "https://www.upwork.com/freelancers/~01c65b24230c0622b6?viewMode=1" },
         { icon: "nimbus:whatsapp", link: "https://wa.me/5579991743525" },
         { icon: "mdi:email-fast", link: "mailto:dethfiregrasp@gmail.com" }
     ]
