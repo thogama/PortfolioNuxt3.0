@@ -20,8 +20,10 @@
             <Stacks />
 
             <Qualification />
+            <div class="d-md-none d-sm-block">
+                <Mywork />
 
-            <Mywork />
+            </div>
 
         </div>
     </RightContainer>

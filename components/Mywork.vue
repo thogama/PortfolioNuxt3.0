@@ -1,6 +1,6 @@
 <template>
-    <section class="row" id="mywork">
-        
+    <section class="row display-1" id="mywork">
+        a
     </section>
 </template>
 
