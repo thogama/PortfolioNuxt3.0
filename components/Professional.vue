@@ -7,9 +7,9 @@
             </div>
 
             <div class="card-body border bg-dark text-white rounded-bottom">
-                <ul class="list-group ">
-                    <li v-for="xp in experiences" class="list-group-item ">
-                        <div class="">
+                <div class=" ">
+                    <div v-for="xp in experiences" class="">
+                        <div class="py-2 fs-5">
                             {{ xp.name }}
 
                         </div>
@@ -47,8 +47,8 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
