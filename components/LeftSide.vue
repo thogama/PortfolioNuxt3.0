@@ -1,6 +1,6 @@
 <template>
     <LeftContainer>
-        <div class=" bg-primary shadow-lg sticky-top">
+        <div id="heigght" class="bg-primary shadow-lg sticky-top">
 
             <div class="bg-secondary p-3">
                 <div class="display-4 p-2">

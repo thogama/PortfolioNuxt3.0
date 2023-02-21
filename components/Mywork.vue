@@ -1,6 +1,8 @@
 <template>
-    <section class="row display-1" id="mywork">
-        a
+    <section class="row" id="mywork">
+        <div class="bg-secondary my-4 text-white p-1 text-center section ">
+            My work
+        </div>
     </section>
 </template>
 

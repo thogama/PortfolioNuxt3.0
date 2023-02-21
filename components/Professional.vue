@@ -9,7 +9,7 @@
             <div class="card-body border bg-dark text-white rounded-bottom">
                 <div class=" ">
                     <div v-for="xp in experiences" class="">
-                        <div class="py-2 fs-5">
+                        <div class="py-2 fs-5 text-nowrap">
                             {{ xp.name }}
 
                         </div>
