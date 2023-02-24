@@ -1,44 +1,68 @@
 <template>
     <LeftContainer>
-        <div id="heigght" class="bg-primary shadow-lg sticky-top">
+        <div class="bg-primary shadow-lg sticky-top">
 
-            <div class="bg-secondary p-3">
+            <div class="bg-secondary">
                 <div class="display-4 p-2">
                     My works
                     <br />
                 </div>
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="~/assets/leftfoto.jpg" class="w-50 rounded">
+                        <div v-for="item, index in carouselsItems">
+                            <div v-if="index == 0" class="carousel-item active">
+                                <div class="row p-4 pt-0 ">
+                                    <div class="fs-2 text-center">
+                                        {{ item.title }}
+                                    </div>
+                                    <div class="col p-1">
+                                        <img :src="`/_nuxt/assets/` + item.images[0]" class="my-1 img-fluid rounded">
+                                        <img :src="`/_nuxt/assets/` + item.images[1]" class="my-1 img-fluid rounded">
 
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                    <div class="col p-1">
+                                        <img :src="`/_nuxt/assets/` + item.images[2]" class="my-1 img-fluid rounded">
+                                        <img :src="`/_nuxt/assets/` + item.images[3]" class="my-1 img-fluid rounded">
+
+                                    </div>
+                                </div>
+                                <div class="carousel-caption bg-dark p-1 d-none d-md-block">
+                                    <h5>{{ item.label }}</h5>
+                                    <p>{{ item.placeholder }}</p>
+                                </div>
+                            </div>
+                            <div v-else class="carousel-item">
+                                <div class="row p-4 pt-0 ">
+                                    <div class="fs-2 text-center">
+                                        {{ item.title }}
+                                    </div>
+                                    <div class="col p-1">
+                                        <img :src="`/_nuxt/assets/` + item.images[0]" class="my-1 img-fluid rounded">
+                                        <img :src="`/_nuxt/assets/` + item.images[1]" class="my-1 img-fluid rounded">
+
+                                    </div>
+                                    <div class="col p-1">
+                                        <img :src="`/_nuxt/assets/` + item.images[2]" class="my-1 img-fluid rounded">
+                                        <img :src="`/_nuxt/assets/` + item.images[3]" class="my-1 img-fluid rounded">
+
+                                    </div>
+                                </div>
+                                <div class="carousel-caption bg-dark p-1 d-none d-md-block">
+                                    <h5>{{ item.label }}</h5>
+                                    <p>{{ item.placeholder }}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="~/assets/leftfoto.jpg" class="w-50 rounded">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="~/assets/leftfoto.jpg" class="w-50 rounded">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
+
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                         data-bs-slide="prev">
@@ -56,10 +80,42 @@
     </LeftContainer>
 </template>
 
-<script setup>
-
+<script lang="ts" setup>
+let carouselsItems: { title: string, images: string[], label: string, placeholder: string }[] = [
+    {
+        title: "Video Chat app",
+        images: [
+            "leftfoto.jpg",
+            "leftfoto.jpg",
+            "leftfoto.jpg",
+            "leftfoto.jpg"
+        ],
+        label: "Made using WebRTC and Nuxt js",
+        placeholder: "Take a look at url"
+    },
+    {
+        title: "app2",
+        images: [
+            "leftfoto.jpg",
+            "leftfoto.jpg",
+            "leftfoto.jpg",
+            "leftfoto.jpg"
+        ],
+        label: "label app 2",
+        placeholder: "Take a look url 2"
+    },
+    {
+        title: "app2",
+        images: [
+            "leftfoto.jpg",
+            "leftfoto.jpg",
+            "leftfoto.jpg",
+            "leftfoto.jpg"
+        ],
+        label: "label app 2",
+        placeholder: "Take a look url 2"
+    }
+]
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
