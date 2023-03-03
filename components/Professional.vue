@@ -16,7 +16,7 @@
                         <div data-bs-toggle="modal" :data-bs-target="`#detail` + xp.name.replaceAll(` `, ``)"
                             class="btn btn-sm btn-success">Details
                         </div>
-                    
+
                         <div class="modal  fade" :id="`detail` + xp.name.replaceAll(` `, ``)" tabindex="-1"
                             :aria-labelledby="`#detail` + xp.name" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
@@ -40,7 +40,7 @@
                                         </div>
                                         <a class="btn  my-3 btn-secondary" target="_blank" :href=xp.link>
                                             Take a look at
-                                            <Icon class="fs-1" :name="xp.icon" />
+                                            <Icon class="fs-3" :name="xp.icon" />
                                         </a>
 
                                     </div>
@@ -53,7 +53,6 @@
         </div>
 
     </div>
-
 </template>
 <script lang="ts" setup>
 let calcYears = (input: string) => {
@@ -73,7 +72,7 @@ let experiences: Array<{ name: string, detail: string, years: any, link: string,
     },
     {
         name: "Software Enginner",
-        detail: "Work as Software Engineer on private projects since 2020, also i actually develop for DITIN a brazilian government institution",
+        detail: "Work as Software Engineer on private projects since 2020, a startup called Neurometa(from 2020 to 2021), also i actually develop for DITIN a brazilian government institution",
         years: calcYears("01/01/2021"),
         link: "https://www.linkedin.com/in/alan-gama-devs",
         icon: "bi:linkedin"

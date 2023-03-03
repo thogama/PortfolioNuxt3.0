@@ -10,13 +10,11 @@
             <div class="col-6 d-flex flex-column justify-content-evenly">
 
                 <div class="p-2 text-start text-nowrap  x-2" v-for="item in items">
-                    <k-container>
-                        <k-element>
-                            <Icon class="text-dark fs-3" :name=item.icon />
 
-                            {{ item.message }}
-                        </k-element>
-                    </k-container>
+                    <Icon class="text-dark fs-3" :name=item.icon />
+
+                    {{ item.message }}
+
 
                 </div>
             </div>

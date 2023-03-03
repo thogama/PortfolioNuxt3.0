@@ -35,7 +35,10 @@ let icons: Array<string> = [
     "logos:mysql",
     "logos:python",
     "mdi:github",
-    "logos:firebase"
+    "logos:firebase",
+    "skill-icons:heroku",
+    "logos:angular-icon",
+
 
 
 

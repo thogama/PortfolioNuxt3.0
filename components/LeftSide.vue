@@ -21,17 +21,13 @@
                                     </div>
                                     <div class="d-flex bg-info rounded mt-5 align-items-center">
                                         <div class="col p-1">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[0]" class="shadow-lg my-1 img-fluid rounded">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[1]" class="shadow-lg my-1 img-fluid rounded">
+                                            <img :src="`/` + item.images[0]" class="shadow-lg my-1 img-fluid rounded">
+                                            <img :src="`/` + item.images[1]" class="shadow-lg my-1 img-fluid rounded">
 
                                         </div>
                                         <div class="col p-1">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[2]" class="shadow-lg my-1 img-fluid rounded">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[3]" class="shadow-lg my-1 img-fluid rounded">
+                                            <img :src="`/` + item.images[2]" class="shadow-lg my-1 img-fluid rounded">
+                                            <img :src="`/` + item.images[3]" class="shadow-lg my-1 img-fluid rounded">
 
                                         </div>
                                     </div>
@@ -47,6 +43,7 @@
                                 </div>
 
                             </div>
+
                             <div v-else class="carousel-item">
                                 <div style=" position: relative; top: 4rem; " class="row p-4 pt-0 ">
                                     <div class="fs-2 text-center">
@@ -55,17 +52,13 @@
                                     <div class="d-flex bg-info rounded mt-5 align-items-center">
 
                                         <div class="col p-1">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[0]" class="p-1 my-1 shadow-lg img-fluid rounded">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[1]" class="my-1 shadow-lg img-fluid rounded">
+                                            <img :src="`/` + item.images[0]" class="p-1 my-1 shadow-lg img-fluid rounded">
+                                            <img :src="`/` + item.images[1]" class="my-1 shadow-lg img-fluid rounded">
 
                                         </div>
                                         <div class="col p-1">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[2]" class="my-1 shadow-lg img-fluid rounded">
-                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                :src="`/` + item.images[3]" class="my-1 shadow-lg img-fluid rounded">
+                                            <img :src="`/` + item.images[2]" class="my-1 shadow-lg img-fluid rounded">
+                                            <img :src="`/` + item.images[3]" class="my-1 shadow-lg img-fluid rounded">
 
                                         </div>
                                     </div>
@@ -94,20 +87,6 @@
                 </div>
             </div>
 
-        </div>
-        <!-- Button trigger modal -->
-        <!-- Modal -->
-        <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-
-                    <div class="modal-body ">
-                        <img class="img-fluid" src="/leftfoto.jpg">
-                    </div>
-
-                </div>
-            </div>
         </div>
     </LeftContainer>
 </template>

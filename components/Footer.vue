@@ -1,6 +1,5 @@
 <template>
-    <div style="background-image: linear-gradient(45deg, #009688, #4caf50);"
-        class="text-center container-fluid text-white">
+    <div style="background-image: linear-gradient(45deg, #009688, #4caf50);" class="text-center container-fluid text-white">
         <div class="fs-4 row bg-dark">
             <div class="text-center p-3">
                 <Icon class="fs-4" name="tabler:diamonds" />
@@ -10,21 +9,15 @@
         </div>
         <div class="fs-4 py-3 justify-content-evenly d-flex ">
             <div v-for="data in icons">
-                <k-container>
-                    <k-element>
-                        <div v-if="!!data.link">
-                            <a :href="data.link">
-                                <Icon class="text-white" :name="data.icon" />
-                            </a>
-                        </div>
-                        <div v-else>
-                            <Icon :name="data.icon" />
+                <div v-if="!!data.link">
+                    <a :href="data.link">
+                        <Icon class="text-white" :name="data.icon" />
+                    </a>
+                </div>
+                <div v-else>
+                    <Icon :name="data.icon" />
 
-                        </div>
-
-
-                    </k-element>
-                </k-container>
+                </div>
             </div>
         </div>
     </div>
@@ -43,6 +36,4 @@ let icons: { icon: string, link?: string }[] =
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
