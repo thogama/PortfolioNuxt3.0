@@ -2,10 +2,10 @@
     <LeftContainer>
         <div class="bg-primary shadow-lg sticky-top">
 
-            <div class="bg-secondary">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            <div class="bg-secondary ">
+                <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="false">
+                    <div class="carousel-indicators ">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active "
                             aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
@@ -15,45 +15,66 @@
                     <div class="carousel-inner">
                         <div v-for="item, index in carouselsItems">
                             <div v-if="index == 0" class="carousel-item active">
-                                <div class="row p-4 pt-0 ">
+                                <div style=" position: relative; top: 4rem; " class="row p-4 pt-0 ">
                                     <div class="fs-2 text-center">
                                         {{ item.title }}
                                     </div>
-                                    <div class="col p-1">
-                                        <img :src="`/` + item.images[0]" class="my-1 img-fluid rounded">
-                                        <img :src="`/_nuxt/assets/` + item.images[1]" class="my-1 img-fluid rounded">
+                                    <div class="d-flex bg-info rounded mt-5 align-items-center">
+                                        <div class="col p-1">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[0]" class="shadow-lg my-1 img-fluid rounded">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[1]" class="shadow-lg my-1 img-fluid rounded">
 
-                                    </div>
-                                    <div class="col p-1">
-                                        <img :src="`/_nuxt/assets/` + item.images[2]" class="my-1 img-fluid rounded">
-                                        <img :src="`/_nuxt/assets/` + item.images[3]" class="my-1 img-fluid rounded">
+                                        </div>
+                                        <div class="col p-1">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[2]" class="shadow-lg my-1 img-fluid rounded">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[3]" class="shadow-lg my-1 img-fluid rounded">
 
+                                        </div>
                                     </div>
+
+
                                 </div>
                                 <div class="carousel-caption bg-dark p-1 d-none d-md-block">
                                     <h5>{{ item.label }}</h5>
-                                    <p>{{ item.placeholder }}</p>
+                                    <p>{{ item.placeholder }}
+                                        <a class="text-success" :href="item.url">{{ item.url }}</a>
+                                    </p>
+
                                 </div>
+
                             </div>
                             <div v-else class="carousel-item">
-                                <div class="row p-4 pt-0 ">
+                                <div style=" position: relative; top: 4rem; " class="row p-4 pt-0 ">
                                     <div class="fs-2 text-center">
                                         {{ item.title }}
                                     </div>
-                                    <div class="col p-1">
-                                        <img :src="`/_nuxt/assets/` + item.images[0]" class="my-1 img-fluid rounded">
-                                        <img :src="`/_nuxt/assets/` + item.images[1]" class="my-1 img-fluid rounded">
+                                    <div class="d-flex bg-info rounded mt-5 align-items-center">
 
-                                    </div>
-                                    <div class="col p-1">
-                                        <img :src="`/_nuxt/assets/` + item.images[2]" class="my-1 img-fluid rounded">
-                                        <img :src="`/_nuxt/assets/` + item.images[3]" class="my-1 img-fluid rounded">
+                                        <div class="col p-1">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[0]" class="p-1 my-1 shadow-lg img-fluid rounded">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[1]" class="my-1 shadow-lg img-fluid rounded">
 
+                                        </div>
+                                        <div class="col p-1">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[2]" class="my-1 shadow-lg img-fluid rounded">
+                                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                :src="`/` + item.images[3]" class="my-1 shadow-lg img-fluid rounded">
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carousel-caption bg-dark p-1 d-none d-md-block">
                                     <h5>{{ item.label }}</h5>
-                                    <p>{{ item.placeholder }}</p>
+                                    <p>{{ item.placeholder }}
+                                        <a class="text-success" :href="item.url">{{ item.url }}</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -72,45 +93,39 @@
                     </button>
                 </div>
             </div>
+
+        </div>
+        <!-- Button trigger modal -->
+        <!-- Modal -->
+        <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+
+                    <div class="modal-body ">
+                        <img class="img-fluid" src="/leftfoto.jpg">
+                    </div>
+
+                </div>
+            </div>
         </div>
     </LeftContainer>
 </template>
 
 <script lang="ts" setup>
-let carouselsItems: { title: string, images: string[], label: string, placeholder: string }[] = [
+let carouselsItems: { title: string, images: string[], label: string, placeholder: string, url: string }[] = [
     {
-        title: "Video Chat app",
+        title: "Constructions Feature at Governament Website",
         images: [
-            "leftfoto.jpg",
-            "leftfoto.jpg",
-            "leftfoto.jpg",
-            "leftfoto.jpg"
+            "port1_1.png",
+            "port1_4.png",
+            "port1_2.png",
+            "port1_3.png"
         ],
-        label: "Made using WebRTC and Nuxt js",
-        placeholder: "Take a look at url"
+        label: "Backend Work with PHP and mySQL api",
+        placeholder: "Take a look at ",
+        url: "https://www.saocristovao.se.gov.br/obras"
     },
-    {
-        title: "app2",
-        images: [
-            "leftfoto.jpg",
-            "leftfoto.jpg",
-            "leftfoto.jpg",
-            "leftfoto.jpg"
-        ],
-        label: "label app 2",
-        placeholder: "Take a look url 2"
-    },
-    {
-        title: "app2",
-        images: [
-            "leftfoto.jpg",
-            "leftfoto.jpg",
-            "leftfoto.jpg",
-            "leftfoto.jpg"
-        ],
-        label: "label app 2",
-        placeholder: "Take a look url 2"
-    }
 ]
 </script>
 

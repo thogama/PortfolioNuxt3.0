@@ -3,6 +3,11 @@ $secondary: #202525;
 $info: #e2e8e2;
 $warning: #5c1fe0;
 $danger: #aeb8b5;
+$carousel-control-color: dark;
+$carousel-control-icon-width: 2rem;
+
+.carousel-item {
+    height: 40rem;
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-
