@@ -3,10 +3,6 @@
         <div class="bg-primary shadow-lg sticky-top">
 
             <div class="bg-secondary">
-                <div class="display-4 p-2">
-                    My works
-                    <br />
-                </div>
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -24,7 +20,7 @@
                                         {{ item.title }}
                                     </div>
                                     <div class="col p-1">
-                                        <img :src="`/_nuxt/assets/` + item.images[0]" class="my-1 img-fluid rounded">
+                                        <img :src="`/` + item.images[0]" class="my-1 img-fluid rounded">
                                         <img :src="`/_nuxt/assets/` + item.images[1]" class="my-1 img-fluid rounded">
 
                                     </div>
