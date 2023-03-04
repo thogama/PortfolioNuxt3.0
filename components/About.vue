@@ -2,7 +2,7 @@
     <section id="aboutme" class="row">
 
         <div class="bg-secondary my-4 text-white p-1 text-center section ">
-            About me
+            {{ $t("About me") }}
         </div>
 
         <div class="shadow-lg d-flex  rounded">
@@ -13,7 +13,7 @@
 
                     <Icon class="text-dark fs-3" :name=item.icon />
 
-                    {{ item.message }}
+                    {{ $t(item.message) }}
 
 
                 </div>

@@ -2,7 +2,7 @@
     <section id="stacks" class="row">
 
         <div class="bg-secondary text-white  my-4  p-1 text-center section ">
-            Stacks and Technologies
+            {{ $t("Stacks and Technologies") }}
         </div>
         <div class="d-flex justify-content-evenly flex-wrap shadow bg-danger rounded">
             <div class=" p-2" v-for="icon, index in icons">

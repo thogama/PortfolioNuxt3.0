@@ -3,18 +3,18 @@
 
         <div class="card ">
             <div class="card-header  fs-4  ">
-                Professional
+                {{ $t("Professional") }}
             </div>
 
             <div class="card-body border bg-dark text-white rounded-bottom">
                 <div class=" ">
                     <div v-for="xp in experiences" class="">
                         <div class="py-2 fs-5 text-nowrap">
-                            {{ xp.name }}
+                            {{ $t(xp.name) }}
 
                         </div>
                         <div data-bs-toggle="modal" :data-bs-target="`#detail` + xp.name.replaceAll(` `, ``)"
-                            class="btn btn-sm btn-success">Details
+                            class="btn btn-sm btn-success">{{ $t("Details") }}
                         </div>
 
                         <div class="modal  fade" :id="`detail` + xp.name.replaceAll(` `, ``)" tabindex="-1"
@@ -22,24 +22,22 @@
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header bg-success text-white">
-                                        <h1 class="modal-title p-2 fs-5 fw-semibold" :id="`#detail` + xp.name">My
-                                            Experience
-                                            as {{
-                                                xp.name
-                                            }}</h1>
+                                        <h1 class="modal-title p-2 fs-5 fw-semibold" :id="`#detail` + xp.name">
+                                            {{ $t("My Experience as") }}
+                                            {{ $t(xp.name) }}</h1>
                                         <button type="button" class="btn-close border bg-danger" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="bg-info  p-3 text-justify text-secondary fw-thin  modal-body">
                                         <div class="fs-4 border rounded p-2">
-                                            {{ xp.detail }}
+                                            {{ $t(xp.detail) }}
                                             <div class="text-center fw-bolder">
-                                                <br />+ {{ xp.years }} years experience
+                                                <br />+ {{ xp.years }} {{ $t("years experience") }}
                                             </div>
 
                                         </div>
                                         <a class="btn  my-3 btn-secondary" target="_blank" :href=xp.link>
-                                            Take a look at
+                                            {{ $t("Take a look at") }}
                                             <Icon class="fs-3" :name="xp.icon" />
                                         </a>
 
@@ -72,7 +70,7 @@ let experiences: Array<{ name: string, detail: string, years: any, link: string,
     },
     {
         name: "Software Enginner",
-        detail: "Work as Software Engineer on private projects since 2020, a startup called Neurometa(from 2020 to 2021), also i actually develop for DITIN a brazilian government institution",
+        detail: "I've been working as a Software Engineer in private projects since 2020, in a startup called Neurometa (from 2020 to 2021) and I've also developed for DITIN, a Brazilian government institution",
         years: calcYears("01/01/2021"),
         link: "https://www.linkedin.com/in/alan-gama-devs",
         icon: "bi:linkedin"

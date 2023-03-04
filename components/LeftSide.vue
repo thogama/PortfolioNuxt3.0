@@ -17,7 +17,7 @@
                             <div v-if="index == 0" class="carousel-item active">
                                 <div style=" position: relative; top: 4rem; " class="row p-4 pt-0 ">
                                     <div class="fs-2 text-center">
-                                        {{ item.title }}
+                                        {{ $t(item.title) }}
                                     </div>
                                     <div class="d-flex bg-info rounded mt-5 align-items-center">
                                         <div class="col p-1">
@@ -35,8 +35,8 @@
 
                                 </div>
                                 <div class="carousel-caption bg-dark p-1 d-none d-md-block">
-                                    <h5>{{ item.label }}</h5>
-                                    <p>{{ item.placeholder }}
+                                    <h5>{{ $t(item.label) }}</h5>
+                                    <p>{{ $t(item.placeholder) }}
                                         <a class="text-success" :href="item.url">{{ item.url }}</a>
                                     </p>
 
@@ -47,7 +47,7 @@
                             <div v-else class="carousel-item">
                                 <div style=" position: relative; top: 4rem; " class="row p-4 pt-0 ">
                                     <div class="fs-2 text-center">
-                                        {{ item.title }}
+                                        {{ $t(item.title) }}
                                     </div>
                                     <div class="d-flex bg-info rounded mt-5 align-items-center">
 
@@ -64,8 +64,8 @@
                                     </div>
                                 </div>
                                 <div class="carousel-caption bg-dark p-1 d-none d-md-block">
-                                    <h5>{{ item.label }}</h5>
-                                    <p>{{ item.placeholder }}
+                                    <h5>{{ $t(item.label) }}</h5>
+                                    <p>{{ $t(item.placeholder) }}
                                         <a class="text-success" :href="item.url">{{ item.url }}</a>
                                     </p>
                                 </div>

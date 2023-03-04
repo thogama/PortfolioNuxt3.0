@@ -1,7 +1,7 @@
 <template>
     <section class="row" id="mywork">
         <div class="bg-secondary my-4 text-white p-1 text-center section ">
-            My work
+            {{ $t("My work") }}
         </div>
     </section>
 </template>
@@ -10,6 +10,4 @@
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

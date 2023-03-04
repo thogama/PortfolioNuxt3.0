@@ -3,7 +3,7 @@
         <div class="fs-4 row bg-dark">
             <div class="text-center p-3">
                 <Icon class="fs-4" name="tabler:diamonds" />
-                Where to find me
+                {{ $t("Where to find me") }}
                 <Icon class="fs-4" name="tabler:diamonds" />
             </div>
         </div>
