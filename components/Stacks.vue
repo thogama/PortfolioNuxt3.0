@@ -38,6 +38,7 @@ let icons: Array<string> = [
     "logos:firebase",
     "skill-icons:heroku",
     "logos:angular-icon",
+    "logos:aws"
 
 
 
