@@ -19,7 +19,7 @@
                                     <div class="fs-2 text-center">
                                         {{ $t(item.title) }}
                                     </div>
-                                    <div class="d-flex bg-info rounded mt-5 align-items-center">
+                                    <div class="d-flex rounded mt-5 align-items-center">
                                         <div class="col p-1">
                                             <img :src="`/` + item.images[0]" class="shadow-lg my-1 img-fluid rounded">
                                             <img :src="`/` + item.images[1]" class="shadow-lg my-1 img-fluid rounded">
@@ -49,7 +49,8 @@
                                     <div class="fs-2 text-center">
                                         {{ $t(item.title) }}
                                     </div>
-                                    <div class="d-flex bg-info rounded mt-5 align-items-center">
+                                    <div v-if="((item.images.length != 0))"
+                                        class="d-flex bg-info rounded mt-5 align-items-center">
 
                                         <div class="col p-1">
                                             <img :src="`/` + item.images[0]" class="p-1 my-1 shadow-lg img-fluid rounded">
@@ -104,6 +105,16 @@ let carouselsItems: { title: string, images: string[], label: string, placeholde
         label: "Backend Work with PHP and mySQL api",
         placeholder: "Take a look at ",
         url: "https://www.saocristovao.se.gov.br/obras"
+    },
+    {
+        title: "On Build...",
+        images: [
+
+
+        ],
+        label: "Building something amazing",
+        placeholder: "Dev working ",
+        url: "Loading Project..."
     },
 ]
 </script>
