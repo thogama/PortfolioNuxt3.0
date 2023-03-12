@@ -1,12 +1,12 @@
 <template >
-    <div class=" my-2 text-center col-sm-6 justify-content-center d-flex flex-column">
+    <div class=" my-2 text-center col-sm-6 justify-content-center d-flex flex-column ps-sm-0">
 
         <div class="card ">
-            <div class="card-header  fs-4  ">
+            <div class="bg-dark text-white card-header  fs-4  ">
                 {{ $t("Education") }}
             </div>
 
-            <div class="card-body bg-dark text-white rounded-bottom ">
+            <div class="card-body bg-danger p-3   rounded-bottom ">
                 <h5 class="card-title">
                     {{ $t("Computer Science Major") }}
                 </h5>

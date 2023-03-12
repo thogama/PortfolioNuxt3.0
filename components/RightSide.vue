@@ -1,6 +1,6 @@
 <template>
     <RightContainer>
-        <div class="px-0 py-1 shadow-lg bg-light text-center sticky-top">
+        <div class="px-0 py-1 shadow-lg bg-dark text-center sticky-top">
             <NavbarR />
         </div>
 
@@ -16,8 +16,6 @@
                 </p>
 
             </div>
-
-            <Citation />
 
             <About />
 

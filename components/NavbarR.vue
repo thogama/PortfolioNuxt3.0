@@ -1,8 +1,9 @@
 <template>
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg">
         <div class="container justify-content-center">
+            
             <div id="naver-scroll" class="align-items-center navbar-nav d-flex flex-row simple-list-example-scrollspy">
-                <a :href=uncaptalize(item) class="btn text-secondary fw-bold nav-item " v-for="item in items">
+                <a :href=uncaptalize(item) class="btn text-light nav-item " v-for="item in items">
                     {{ $t(item) }}
                 </a>
             </div>
