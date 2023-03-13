@@ -1,8 +1,12 @@
 <template>
     <LeftContainer>
-        <div class="bg-primary shadow-lg sticky-top">
+        <div class="bg-secondary my-5 text-white p-1 text-center section ">
+            {{ $t("My work") }}
 
-            <div class="bg-secondary ">
+        </div>
+        <div style="z-index: 0;" class="bg-primary shadow-lg sticky-top">
+            tes
+            <!-- <div class="bg-secondary ">
                 <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="false">
                     <div class="carousel-indicators ">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active "
@@ -86,8 +90,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
-
+            </div> -->
         </div>
     </LeftContainer>
 </template>

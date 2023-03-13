@@ -4,5 +4,6 @@
         <LeftSide />
 
         <RightSide />
+
     </div>
 </template>
