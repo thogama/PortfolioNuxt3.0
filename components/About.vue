@@ -5,9 +5,9 @@
             {{ $t("About me") }}
         </div>
         <img class="form img-fluid p-0 pb-3 rounded-top" src="/leftfoto.jpg" />
-        <div class="shadow-lg d-flex bg-dark text-white rounded-bottom">
+        <div class="shadow-lg d-flex bg-danger rounded-bottom">
 
-            <div class="col-6 d-flex flex-column justify-content-evenly">
+            <div class="col-6 d-flex flex-column  justify-content-evenly">
 
                 <div class="p-2 text-start text-nowrap  x-2" v-for="item in items">
 
