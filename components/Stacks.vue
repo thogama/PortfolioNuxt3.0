@@ -5,10 +5,16 @@
             {{ $t("Stacks and Technologies") }}
         </div>
         <div class="d-flex justify-content-evenly flex-wrap shadow bg-danger rounded">
-            <div class=" p-2" v-for="icon, index in icons">
-                <k-container class="p-1">
-                    <k-element>
+            <div class="k-el p-2" v-for="icon, index in icons">
+                <k-container :active=false class="d-lg-none d-sm-block p-1">
+                    <k-element class="">
 
+                        <Icon class=" bg-info rounded m-1 p-1 fs-1" :name="icon" />
+
+                    </k-element>
+                </k-container>
+                <k-container class="d-none d-lg-block p-1">
+                    <k-element class="">
                         <Icon class=" bg-info rounded m-1 p-1 fs-1" :name="icon" />
 
                     </k-element>
@@ -45,3 +51,9 @@ let icons: Array<string> = [
 
 ]
 </script>
+<style lang="scss">
+.k-el {
+
+    transform: none;
+}
+</style>

@@ -1,13 +1,13 @@
 <template>
-    <section id="aboutme" class="row">
+    <section id="aboutme" class="row bg-info">
 
         <div class="bg-secondary my-4 text-white p-1 text-center section ">
             {{ $t("About me") }}
         </div>
+        <img class="form img-fluid p-0 pb-3 rounded-top" src="/leftfoto.jpg" />
+        <div class="shadow-lg d-flex bg-danger rounded-bottom">
 
-        <div class="shadow-lg d-flex  rounded">
-
-            <div class="col-6 d-flex flex-column justify-content-evenly">
+            <div class="col-6 d-flex flex-column  justify-content-evenly">
 
                 <div class="p-2 text-start text-nowrap  x-2" v-for="item in items">
 
@@ -19,9 +19,7 @@
                 </div>
             </div>
 
-            <div class="col d-flex  align-items-center">
-                <img class="img-fluid  circle-section rounded-circle" src="~/assets/AboutFoto.png" />
-            </div>
+
         </div>
 
 
