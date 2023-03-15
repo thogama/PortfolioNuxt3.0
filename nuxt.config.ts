@@ -4,20 +4,22 @@ export default defineNuxtConfig({
     css: ["~~/sass/main.scss"],
     modules: ['nuxt-icon', '@nuxtjs/i18n'],
     i18n: {
-        detectBrowserLanguage: {
-            alwaysRedirect: true
-        },
+        langDir: "locales",
         locales: [
-            { code: 'en', name: 'English', iso: 'en-US', file: 'en-US.json' },
-            { code: 'pt', name: 'Português', iso: 'pt-BR', file: 'ptBR.json' }
+            { code: 'en', iso: 'en-US', file: 'en-US' },
+            { code: 'pt', iso: 'pt-BR', file: 'pt-BR' },
         ],
+        defaultLocale: 'en',
         lazy: true,
-        langDir: 'locales/',
-        vueI18n: {
-            fallbackLocale: 'en'
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'i18n_redirected',
+            alwaysRedirect: true,
+            fallbackLocale: 'en',
         },
-        vueI18nLoader: true
-
+        vueI18n: {
+            fallbackLocale: 'en',
+        },
     },
     nitro: {
         preset: "firebase"
